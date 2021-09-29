@@ -1,10 +1,10 @@
-import {render} from 'react-dom';
-import App from './components/App';
+import { render } from "react-dom";
+import App from "./components/App";
+import { AuthContextProvider } from "./store/auth-context";
 
-
-
-
-
-
-render(<App></App>, document.getElementById("root"));
-
+render(
+  <AuthContextProvider>
+    <App />
+  </AuthContextProvider>,
+  document.getElementById("root")
+);
